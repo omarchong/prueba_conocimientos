@@ -1,14 +1,13 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/trix/1.3.1/trix.css">
-    
-    <div class="container my-5">
+<div class="container my-5">
     <div class="card">
         <h5 class="card-header">Gestión de clientes</h5>
         <div class="card-body">
             <form action="{{ route('clientes.store') }}" method="POST" id="clientes" class="needs-validation" novalidate>
                 @csrf
                 <div class="form-row">
-                  
+
                     <div class="col-md-12">
                         <label for="exampleInputEmail1" class="form-label">Seleccione el contacto</label>
                         <div class="form-group">
@@ -205,6 +204,15 @@
             </form>
         </div>
     </div>
+    @if (session()->has('success'))
+    <script>
+        Swal.fire(
+            'Exitoso!',
+            '{{ session()->get('success')}}',
+            'success'
+        )
+    </script>
+    @endif
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/trix/1.3.1/trix.js"></script>
@@ -227,7 +235,7 @@
                 }
             })
         })
-        
+
 
     });
 </script>

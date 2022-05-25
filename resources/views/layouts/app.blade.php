@@ -10,9 +10,12 @@
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+    @yield('css')
     <!-- Styles -->
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     <!--  <link rel="stylesheet" href="{{asset('css/style.css') }}"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
 
 
 
@@ -22,16 +25,8 @@
     <!-- Scripts -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="{{ mix('js/app.js') }}" defer></script>
-    
-    @if (session()->has('success'))
-    <script>
-        Swal.fire(
-            'Exitoso!',
-            '{{ session()->get('success')}}',
-            'success'
-        )
-    </script>
-    @endif
+
+
 
 
 </head>

@@ -13,11 +13,14 @@ use Illuminate\Support\Facades\DB;
 
 class ClientesController extends Controller
 {
+
+    /* retorna a la vista inicial de clientes */
     public function index()
     {
         return view('clientes.index');
     }
 
+    /* retorna a la vista para crear un cliente */
     public function create()
     {
         return view('clientes.create', [
@@ -28,7 +31,7 @@ class ClientesController extends Controller
         ]);
     }
 
-
+    /* retorna ala vista para editar cliente */
     public function edit(Cliente $cliente)
     {
         return view('clientes.edit', [
@@ -42,6 +45,7 @@ class ClientesController extends Controller
         ]);
     }
 
+    /* actualiza un cliente */
     public function update(ClienteRequest $request, cliente $cliente)
     {
         $cliente->update($request->validated());
@@ -51,6 +55,7 @@ class ClientesController extends Controller
             ->withSuccess("El cliente $cliente->nombreempresa se actualizo exitosamente");
     }
 
+    /* crea un cliente, validando a atravez del product request */
     public function store(ClienteRequest $request)
     {
         /*  dd($request->all()); */
@@ -60,19 +65,21 @@ class ClientesController extends Controller
             ->withSuccess("El cliente $cliente->nombreempresa se guardo correctamente");
     }
 
+    /* muestra el detalle de un ciente */
     public function show($id)
     {
         $cliente = Cliente::findOrFail($id);
         return view('clientes.show', compact('cliente'));
     }
 
+    /* obtiene los estados */
     public function estados()
     {
         $estados = DB::table('estados')->get();
         return view('system.clientes.index', compact('estados'));
     }
 
-
+    /* obtiene los municipios */
     public function getMunicipios(Request $request)
     {
         $municipios = DB::table('municipios')
@@ -83,7 +90,7 @@ class ClientesController extends Controller
         }
     }
 
-
+    /* retorna los registros en la tabla */
     public function RegistrosDatatables()
     {
         return datatables()
@@ -97,10 +104,10 @@ class ClientesController extends Controller
             )->toJson();
     }
 
-
+    /* elimina un registro */
     public function destroy(Cliente $cliente)
     {
-       $cliente->delete();
+        $cliente->delete();
         return redirect()
             ->route("clientes.index")
             ->withSuccess("El producto $cliente->nombre se ha dado de baja exitosamente");

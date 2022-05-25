@@ -208,6 +208,15 @@
             </form>
         </div>
     </div>
+    @if (session()->has('success'))
+    <script>
+        Swal.fire(
+            'Exitoso!',
+            '{{ session()->get('success')}}',
+            'success'
+        )
+    </script>
+    @endif
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/trix/1.3.1/trix.js"></script>
 

@@ -67,6 +67,8 @@
 </x-guest-layout>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
+
+<!-- funcion para validar campos -->
 <script>
     $(document).ready(function() {
         $("#validacion").validate({
