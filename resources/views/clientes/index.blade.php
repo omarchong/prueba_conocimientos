@@ -1,8 +1,8 @@
-@section('css')
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.12.0/css/dataTables.bootstrap4.min.css">
+<link rel="stylesheet" href="{{asset('css/style.css') }}">
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-@endsection
+
 
 <div class="container-fluid mt-5">
 
@@ -35,10 +35,20 @@
         </div>
     </div>
 </div>
+@if (session()->has('success'))
+<script>
+    Swal.fire(
+        'Exitoso!',
+        '{{ session()->get('
+        success ')}}',
+        'success'
+    )
+</script>
+@endif
 
 
-@section('js')
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="https://cdn.datatables.net/1.12.0/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.12.0/js/dataTables.bootstrap4.min.js"></script>
@@ -81,6 +91,10 @@
                                                 class="btn btn-primary">
                                                 <i class="fas fa-eye"></i>
                                                 </a>
+
+
+                                               
+
                                                
                                     `
                 }
@@ -94,4 +108,3 @@
         $('#clientes').DataTable().ajax.reload();
     }
 </script>
-@endsection

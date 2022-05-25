@@ -1,0 +1,106 @@
+div.header {
+    background-color: #60C8C9;
+    height: 80px;
+    margin: 15px;
+}
+
+/* boton */
+/* .btn {
+    background-color: #0B6FED;
+    border: none;
+    color: white;
+    padding: 10px 17px;
+    text-decoration: none;
+    font-size: 16px;
+    float: right;
+    margin-top:5px;
+} */
+
+.tabla-pedido {
+    width: 90%;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 40px auto 0 auto;
+    padding: 30px;
+    table-layout: fixed;
+}
+
+.tabla-pedido caption {
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 8px 0px;
+
+}
+
+.tabla-pedido tr {
+    background-color: #EDEEF3;
+    border: 1px solid #ddd;
+}
+
+.tabla-pedido th,
+.tabla-pedido td {
+    font-size: 16px;
+    padding: 8px;
+    text-align: center;
+}
+
+.tabla-pedido thead th {
+    text-transform: uppercase;
+    background-color: #EDEEF3;
+}
+
+.tabla-pedido tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 600px) {
+    .tabla-pedido {
+        border: 0px;
+    }
+
+    .tabla-pedido caption {
+        font-size: 22px;
+    }
+
+    .tabla-pedido thead {
+        display: none;
+    }
+
+    .tabla-pedido tr {
+        margin-bottom: 8px;
+        border-bottom: 4px solid #ddd;
+        display: block;
+    }
+
+    .tabla-pedido th,
+    .tabla-pedido td {
+        font-size: 12px;
+    }
+
+    .tabla-pedido td {
+        display: block;
+        border-bottom: 1px solid #ddd;
+        text-align: right;
+    }
+
+    .tabla-pedido td:last-child {
+        border-bottom: 0px;
+    }
+
+    .tabla-pedido td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-transform: uppercase;
+        float: left;
+    }
+}
+
+
+#encabezado{
+    background-color: #60C8C9;
+}
+
+h3{
+     color: white;
+}
