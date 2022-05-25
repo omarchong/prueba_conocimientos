@@ -11,7 +11,10 @@
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- 1.- Descargar el proyecto atravez de este enlace https://github.com/omarchong/prueba_conocimientos.git
+- 2.- Descomprimir y abrirlo en su editor de preferencia
+- 3.- Por medio de la linea de comandos ejecute composer install, npm install, npm run dev para compilar el proyecto.
+- 4.- Genere la clave de acceso a travez del comando php artisan key:generate
 - [Powerful dependency injection container](https://laravel.com/docs/container).
 - Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
 - Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
