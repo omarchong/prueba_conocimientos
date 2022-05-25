@@ -204,16 +204,9 @@
             </form>
         </div>
     </div>
-    @if (session()->has('success'))
-    <script>
-        Swal.fire(
-            'Exitoso!',
-            '{{ session()->get('success')}}',
-            'success'
-        )
-    </script>
-    @endif
+ 
 </div>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/trix/1.3.1/trix.js"></script>
 <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>

@@ -24,6 +24,7 @@
                     <h5><b>Giro empresarial: </b> {{$cliente->giro->nombre}} </h5>
 
 
+
                 </div>
 
             </div>
